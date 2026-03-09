@@ -1,0 +1,40 @@
+node_modules/
+dist/
+dist.bak/
+*.tsbuildinfo
+
+# Secrets & tokens
+.env
+.env.local
+.tsm-token
+
+# Logs
+logs/
+*.log
+
+# Screenshots (may contain PII)
+*.png
+*.jpg
+*.jpeg
+
+# Temp files
+tmp/
+
+# OS
+.DS_Store
+
+# IDE / tool state
+.claude/
+.omc/
+.sisyphus/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Backup files
+*.bak
+
+# Misc
+.pnpm-approve-builds
+package-lock.json
