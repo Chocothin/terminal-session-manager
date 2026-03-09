@@ -36,6 +36,7 @@ PWA + WebSocket 기반 터미널 세션 매니저. 브라우저에서 서버의 
 
 - Node.js >= 20
 - pnpm
+- [Tailscale](https://tailscale.com/) — 외부 네트워크에서 접속 시 VPN 필요
 
 ### 설치
 
@@ -63,6 +64,20 @@ pnpm build
 ```
 
 `start.sh`는 최초 실행 시 `.tsm-token` 파일에 토큰을 자동 생성합니다. 이 토큰으로 브라우저에서 인증합니다.
+
+### 네트워크 접속 (Tailscale)
+
+이 서버는 TLS를 자체 지원하지 않으므로, 외부(모바일 등)에서 접속하려면 [Tailscale](https://tailscale.com/) VPN을 사용하세요.
+
+```bash
+# 서버에서 Tailscale 설치 후
+TSM_HOST="0.0.0.0" ./start.sh
+
+# 모바일/외부 기기에서 Tailscale IP로 접속
+# http://<tailscale-ip>:3001
+```
+
+> Tailscale 없이 사용하려면 Caddy/Nginx 등 리버스 프록시로 TLS를 적용하세요.
 
 ## 환경 변수
 
