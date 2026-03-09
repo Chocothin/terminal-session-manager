@@ -1,0 +1,11 @@
+{
+  "name": "Terminal Session Manager",
+  "short_name": "TSM",
+  "description": "Browser-based terminal session manager",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1e1e1e",
+  "background_color": "#1e1e1e",
+  "orientation": "any",
+  "icons": []
+}
